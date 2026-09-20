@@ -1,0 +1,211 @@
+.watchlistPage {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.titleIcon {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #275f30;
+  border-radius: 14px;
+  background: #112513;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 28px rgba(53, 255, 98, 0.08);
+}
+
+.title {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 10px 0 0;
+  color: #6f7681;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.grid {
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  border: 1px solid #262626;
+  border-radius: 22px;
+  background: #171717;
+  padding: 22px 22px 20px;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.24);
+}
+
+.cardHeader,
+.asset,
+.removeButton,
+.marketLink {
+  display: flex;
+  align-items: center;
+}
+
+.cardHeader {
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.asset {
+  gap: 12px;
+  min-width: 0;
+}
+
+.coinIcon,
+.fallbackIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.fallbackIcon {
+  background: #17311b;
+  color: #35ff62;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.coinName {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.coinSymbol {
+  margin-top: 4px;
+  color: #727984;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.removeButton {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  background: transparent;
+  color: #626975;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.removeButton:hover {
+  border-color: #5c2626;
+  color: #ff4e4e;
+}
+
+.price {
+  margin-top: 28px;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.deltaUp,
+.deltaDown {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.deltaUp {
+  color: #35ff62;
+}
+
+.deltaDown {
+  color: #ff5b5b;
+}
+
+.marketCap {
+  margin-top: 18px;
+  color: #7b838d;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.state {
+  margin-top: 38px;
+  border: 1px solid #262626;
+  border-radius: 22px;
+  background: #171717;
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  text-align: center;
+  color: #7b838d;
+}
+
+.stateTitle {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.stateText {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.marketLink {
+  width: max-content;
+  height: 44px;
+  margin: 20px auto 0;
+  border: 1px solid #35ff62;
+  border-radius: 14px;
+  color: #35ff62;
+  justify-content: center;
+  padding: 0 18px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.error {
+  color: #ff7474;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

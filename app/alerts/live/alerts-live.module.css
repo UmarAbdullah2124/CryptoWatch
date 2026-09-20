@@ -1,0 +1,147 @@
+.alertsPage {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.titleIcon {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #275f30;
+  border-radius: 14px;
+  background: #112513;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 28px rgba(53, 255, 98, 0.08);
+}
+
+.title {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 10px 0 0;
+  color: #6f7681;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.list {
+  margin-top: 38px;
+  display: grid;
+  gap: 14px;
+}
+
+.alertRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border: 1px solid #262626;
+  border-radius: 20px;
+  background: #171717;
+  padding: 20px 22px;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.24);
+}
+
+.alertIcon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #4a1a1a;
+  border-radius: 12px;
+  background: #2a0a0a;
+  color: #ff5959;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.alertHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.asset {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.price {
+  color: #7d8590;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.message {
+  color: #a7adb7;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #727984;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  padding-top: 4px;
+}
+
+.state {
+  margin-top: 38px;
+  border: 1px solid #262626;
+  border-radius: 20px;
+  background: #171717;
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  color: #7b838d;
+  text-align: center;
+}
+
+.stateTitle {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.stateText {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.error {
+  color: #ff7474;
+}
+
+@media (max-width: 760px) {
+  .alertRow {
+    flex-direction: column;
+  }
+}

@@ -6,10 +6,13 @@ import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import { ArrowRight, Circle, LockKeyhole, Mail, Shield } from "lucide-react";
 
+const demoEmail = "testop@gmail.com";
+const demoPassword = "password123";
+
 export default function LoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState(demoEmail);
+  const [password, setPassword] = useState(demoPassword);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -112,6 +115,18 @@ export default function LoginPage() {
                   {error}
                 </p>
               ) : null}
+
+              <div className="rounded-xl border border-[#00ff41]/30 bg-[#00ff41]/5 p-3 text-xs text-[#d9ffe2]">
+                <p className="font-mono uppercase tracking-[0.2em] text-[#00ff41]">
+                  Demo Operator
+                </p>
+                <p className="mt-2 font-medium">
+                  Email: <span className="font-mono text-white">{demoEmail}</span>
+                </p>
+                <p className="font-medium">
+                  Password: <span className="font-mono text-white">{demoPassword}</span>
+                </p>
+              </div>
 
               <button
                 type="submit"

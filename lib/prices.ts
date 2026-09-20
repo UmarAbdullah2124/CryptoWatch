@@ -30,8 +30,7 @@ export interface PricesPayload {
 }
 
 const COINGECKO_API = "https://api.coingecko.com/api/v3";
-const EXPRESS_ENGINE_URL =
-  process.env.EXPRESS_ENGINE_URL ?? "http://localhost:4000";
+const EXPRESS_ENGINE_URL = process.env.EXPRESS_ENGINE_URL;
 const CACHE_TTL_MS = 30_000;
 
 let memoryCache: PricesPayload | null = null;
@@ -74,6 +73,10 @@ async function refreshPrices(): Promise<PricesPayload> {
 }
 
 async function getEnginePrices(): Promise<PricesPayload | null> {
+  if (!EXPRESS_ENGINE_URL) {
+    return null;
+  }
+
   try {
     const response = await fetch(`${EXPRESS_ENGINE_URL}/prices`, {
       cache: "no-store",
